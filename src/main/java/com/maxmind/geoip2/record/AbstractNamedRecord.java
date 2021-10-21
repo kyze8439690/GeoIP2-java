@@ -36,11 +36,6 @@ public abstract class AbstractNamedRecord extends AbstractRecord {
         return this.geoNameId;
     }
 
-    /**
-     * @return The name of the city based on the locales list passed to the
-     * {@link com.maxmind.geoip2.WebServiceClient} constructor. This
-     * attribute is returned by all end points.
-     */
     @JsonIgnore
     public String getName() {
         for (String lang : this.locales) {
