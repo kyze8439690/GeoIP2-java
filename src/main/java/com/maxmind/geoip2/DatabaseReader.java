@@ -1,5 +1,6 @@
 package com.maxmind.geoip2;
 
+import com.google.common.base.Optional;
 import com.maxmind.db.*;
 import com.maxmind.db.Reader.FileMode;
 import com.maxmind.geoip2.exception.AddressNotFoundException;
@@ -13,7 +14,6 @@ import java.io.InputStream;
 import java.net.InetAddress;
 import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 
 /**
  * <p>
@@ -313,7 +313,7 @@ public class DatabaseReader implements DatabaseProvider, Closeable {
         );
         CountryResponse response = result.getModel();
         if (response == null) {
-            return Optional.empty();
+            return Optional.absent();
         }
         return Optional.of(
             new CountryResponse(
@@ -352,7 +352,7 @@ public class DatabaseReader implements DatabaseProvider, Closeable {
         );
         CityResponse response = result.getModel();
         if (response == null) {
-            return Optional.empty();
+            return Optional.absent();
         }
         return Optional.of(
             new CityResponse(
@@ -399,7 +399,7 @@ public class DatabaseReader implements DatabaseProvider, Closeable {
         );
         AnonymousIpResponse response = result.getModel();
         if (response == null) {
-            return Optional.empty();
+            return Optional.absent();
         }
         return Optional.of(
             new AnonymousIpResponse(
@@ -444,7 +444,7 @@ public class DatabaseReader implements DatabaseProvider, Closeable {
         );
         AsnResponse response = result.getModel();
         if (response == null) {
-            return Optional.empty();
+            return Optional.absent();
         }
         return Optional.of(
             new AsnResponse(
@@ -490,7 +490,7 @@ public class DatabaseReader implements DatabaseProvider, Closeable {
         );
         ConnectionTypeResponse response = result.getModel();
         if (response == null) {
-            return Optional.empty();
+            return Optional.absent();
         }
         return Optional.of(
             new ConnectionTypeResponse(
@@ -536,7 +536,7 @@ public class DatabaseReader implements DatabaseProvider, Closeable {
         );
         DomainResponse response = result.getModel();
         if (response == null) {
-            return Optional.empty();
+            return Optional.absent();
         }
         return Optional.of(
             new DomainResponse(
@@ -582,7 +582,7 @@ public class DatabaseReader implements DatabaseProvider, Closeable {
         );
         EnterpriseResponse response = result.getModel();
         if (response == null) {
-            return Optional.empty();
+            return Optional.absent();
         }
         return Optional.of(
             new EnterpriseResponse(
@@ -629,7 +629,7 @@ public class DatabaseReader implements DatabaseProvider, Closeable {
         );
         IspResponse response = result.getModel();
         if (response == null) {
-            return Optional.empty();
+            return Optional.absent();
         }
         return Optional.of(
             new IspResponse(

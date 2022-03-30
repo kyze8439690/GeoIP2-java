@@ -28,6 +28,7 @@ dependencies {
     implementation("com.fasterxml.jackson.core:jackson-databind:2.13.1")
     implementation("com.fasterxml.jackson.core:jackson-core:2.13.1")
     implementation("com.fasterxml.jackson.core:jackson-annotations:2.13.1")
+    implementation("com.google.guava:guava:31.1-android")
     testImplementation("junit:junit:4.13.2")
     testImplementation("com.github.tomakehurst:wiremock:2.27.2")
     testImplementation("org.skyscreamer:jsonassert:1.5.0")
