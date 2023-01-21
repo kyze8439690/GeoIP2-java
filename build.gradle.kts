@@ -25,7 +25,7 @@ android {
 
 dependencies {
     api(project(":MaxMind-DB-Reader-java"))
-    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.2.2")
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.0")
     implementation("commons-codec:commons-codec:1.15")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.14.1")
     implementation("com.fasterxml.jackson.core:jackson-core:2.14.1")
