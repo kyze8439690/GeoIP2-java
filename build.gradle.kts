@@ -1,4 +1,5 @@
 @file:Suppress("MagicNumber")
+
 plugins {
     id("com.android.library")
 }
