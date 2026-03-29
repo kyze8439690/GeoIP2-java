@@ -1,10 +1,23 @@
 package com.maxmind.geoip2;
 
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import com.maxmind.db.Reader;
 import com.maxmind.geoip2.exception.AddressNotFoundException;
 import com.maxmind.geoip2.exception.GeoIp2Exception;
-import com.maxmind.geoip2.model.*;
+import com.maxmind.geoip2.model.AnonymousIpResponse;
+import com.maxmind.geoip2.model.AsnResponse;
+import com.maxmind.geoip2.model.CityResponse;
+import com.maxmind.geoip2.model.ConnectionTypeResponse;
 import com.maxmind.geoip2.model.ConnectionTypeResponse.ConnectionType;
+import com.maxmind.geoip2.model.CountryResponse;
+import com.maxmind.geoip2.model.DomainResponse;
+import com.maxmind.geoip2.model.EnterpriseResponse;
+import com.maxmind.geoip2.model.IspResponse;
+
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -17,9 +30,6 @@ import java.net.InetAddress;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.Arrays;
-
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.junit.Assert.*;
 
 public class DatabaseReaderTest {
 

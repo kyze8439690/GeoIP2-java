@@ -1,16 +1,17 @@
 package com.maxmind.geoip2.model;
 
+import static org.junit.Assert.assertEquals;
+
 import com.fasterxml.jackson.databind.InjectableValues;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.jr.ob.JSON;
+
 import org.junit.Test;
 
 import java.io.IOException;
 import java.util.Collections;
-
-import static org.junit.Assert.assertEquals;
 
 public class JsonTest {
 
